@@ -1,7 +1,7 @@
 /*----------------------------------------- [MASTER STYLE SHEET] * Project: Landing Page HTML5 Template * Version: v1.1.1 * Copyright 2018-2020 Sends * Last Changes: 21/08/2018 * Author: RN53 Themes -----------------------------------------------*/
 /*--------------------------------------------- [TABLE OF CONTENT] 1. COMMON STYLES 2. PRE LOADING 3. CONTAINER SIZE 4. TOP SECTION 5. BANNER SECTION 6. BOOKING FORM 7. PACKAGES 8. CUSTOMER TESTIMONIALS 9. FOOTER 10. TRAVEL PLAN 11. MOBILE FRIENDLY STYLES(RESPONSIVE STYLES) ------------------------------------------------*/
 /*-------------------------------------------------*/
-/* = COMMON STYLES 
+/* = COMMON STYLES
 /*-------------------------------------------------*/
  body{
      font-family: 'Poppins', sans-serif;
@@ -112,7 +112,7 @@
      color: #1a2a38;
 }
 /*-------------------------------------------------*/
-/* PRE LOADING 
+/* PRE LOADING
 /*-------------------------------------------------*/
  #preloader {
      position: fixed;
@@ -157,7 +157,7 @@
     }
 }
 /*-------------------------------------------------*/
-/* = CONTAINER SIZE 
+/* = CONTAINER SIZE
 /*-------------------------------------------------*/
  .land-full{
      width: 100%;
@@ -263,7 +263,7 @@
      padding:15px;
 }
 /*-------------------------------------------------*/
-/* = TOP SECTION 
+/* = TOP SECTION
 /*-------------------------------------------------*/
  .header{
     -webkit-transition: all 0.5s ease;
@@ -428,7 +428,7 @@
     }
 }
 /*-------------------------------------------------*/
-/* = BANNER SECTION 
+/* = BANNER SECTION
 /*-------------------------------------------------*/
  .land-3-banner{
      z-index: 5;
@@ -530,7 +530,7 @@
      letter-spacing: 0.5px;
 }
 /*-------------------------------------------------*/
-/* = BOOKING FORM 
+/* = BOOKING FORM
 /*-------------------------------------------------*/
  .land-3-banner-form{
      float: left;
@@ -887,7 +887,7 @@
      top: -90px;
 }
 /*-------------------------------------------------*/
-/* = TRANSION EFFECTS 
+/* = TRANSION EFFECTS
 /*-------------------------------------------------*/
  @-webkit-keyframes fadeIn {
      from {
@@ -949,7 +949,7 @@
      animation-delay: 2.1s;
 }
 /*-------------------------------------------------*/
-/* = FOOTER 
+/* = FOOTER
 /*-------------------------------------------------*/
  .land-1-foot-full{
      background: hsl(0, 0%, 100%);
@@ -967,7 +967,7 @@
      color: #908f8f;
 }
 /*-------------------------------------------------*/
-/* = PRODUCT SHOWCASE 
+/* = PRODUCT SHOWCASE
 /*-------------------------------------------------*/
  .products-main {
      border-top: 1px solid #eaeaea;
@@ -1277,10 +1277,10 @@
      border-radius: 2px;
 }
 /*-------------------------------------------------*/
-/* = MOBILE FRIENDLY STYLES(RESPONSIVE STYLES) 
+/* = MOBILE FRIENDLY STYLES(RESPONSIVE STYLES)
 /*-------------------------------------------------*/
 /*-------------------------------------------------*/
-/* = When the browser is between 0px and 1050px wide,below css will be applied. 
+/* = When the browser is between 0px and 1050px wide,below css will be applied.
 /*-------------------------------------------------*/
  @media screen and (max-width:1050px){
      .land-container{
@@ -1310,7 +1310,7 @@
     }
 }
 /*-------------------------------------------------*/
-/* = When the browser is between 0px and 992px wide,below css will be applied. 
+/* = When the browser is between 0px and 992px wide,below css will be applied.
 /*-------------------------------------------------*/
  @media screen and (max-width:992px){
      .land-3-top-contact ul li {
@@ -1338,7 +1338,7 @@
     }
 }
 /*-------------------------------------------------*/
-/* = When the browser is between 0px and 767px wide,below css will be applied. 
+/* = When the browser is between 0px and 767px wide,below css will be applied.
 /*-------------------------------------------------*/
  @media screen and (max-width:767px){
      .land-3-top-logo, .land-3-dwn-img, .land-3-dwn-right {
@@ -1422,7 +1422,7 @@
     }
 }
 /*-------------------------------------------------*/
-/* = When the browser is between 0px and 480px wide,below css will be applied. 
+/* = When the browser is between 0px and 480px wide,below css will be applied.
 /*-------------------------------------------------*/
  @media screen and (max-width:480px){
      .land-3-dwn-right a {
@@ -1444,8 +1444,7 @@
     }
 }
 /*-------------------------------------------------*/
-/* = When the browser is between 0px and 400px wide,below css will be applied. 
+/* = When the browser is between 0px and 400px wide,below css will be applied.
 /*-------------------------------------------------*/
  @media screen and (max-width:400px){
 }
- 

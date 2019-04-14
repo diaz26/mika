@@ -1,86 +1,86 @@
 <body>
   <!-- Preloader -->
   <!--div id="preloader">
-    <div id="status">&nbsp;</div>
-  </div-->
+  <div id="status">&nbsp;</div>
+</div-->
 
 
-  <!-- BANNER SECTION -->
-  <section id="hom">
-    <div class="land-full header">
-      <div class="land-container">
-        <div class="land-3-top">
-          <div class="land-3-top-logo">
-            <a href="#"><img src="<?= base_url(); ?>assets/images/software-logo.png" alt="Company name"></a>
-          </div>
-          <div class="land-3-top-contact">
-            <ul>
-              <li><a href="#hom">Home</a></li>
-              <li><a href="#pri">Pricing</a></li>
-              <li><a href="#fea">Features</a></li>
-              <li><a href="#dwn">Download Now</a></li>
-            </ul>
-          </div>
+<!-- BANNER SECTION -->
+<section id="hom">
+  <div class="land-full land-3-top-full">
+    <div class="land-container">
+      <div class="land-3-top">
+        <div class="land-3-top-logo">
+          <a href="#"><img src="<?= base_url(); ?>assets/images/software-logo.png" alt="Company name"></a>
+        </div>
+        <div class="land-3-top-contact">
+          <ul>
+            <li><a href="#hom">Home</a></li>
+            <li><a href="#pri">Pricing</a></li>
+            <li><a href="#fea">Features</a></li>
+            <li><a href="#dwn">Download Now</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- BANNER SECTION -->
-  <section id="dwn">
-    <div class="land-full land-3-banner-full">
-      <div class="land-container">
+<!-- BANNER SECTION -->
+<section id="dwn">
+  <div class="land-full land-3-banner-full">
+    <div class="land-container">
 
-        <div class="land-3-banner">
-          <div class="land-3-banner-conte">
-            <h1 class="fade-in one"><span class="tit1">Free Demo</span> Productivity Software<span class="tit2">Easy to build your web presence</span></h1>
-            <p class="fade-in two">Cras nulla nulla, pulvinar sit amet nunc at, lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla. Quisque egestas turpis a odio tristique vehicula. Maecenas eu sapien efficitur, rutrum mi sit amet, viverra arcu.
-            </p>
-            <a href="#">Buy Now</a>
-          </div>
+      <div class="land-3-banner">
+        <div class="land-3-banner-conte">
+          <h1 class="fade-in one"><span class="tit1">Free Demo</span> Productivity Software<span class="tit2">Easy to build your web presence</span></h1>
+          <p class="fade-in two">Cras nulla nulla, pulvinar sit amet nunc at, lacinia viverra lectus. Fusce imperdiet ullamcorper metus eu fringilla. Quisque egestas turpis a odio tristique vehicula. Maecenas eu sapien efficitur, rutrum mi sit amet, viverra arcu.
+          </p>
+          <a href="#">Buy Now</a>
+        </div>
 
-          <!-- BOOKING FORM -->
-          <div class="land-3-banner-form fade-in four">
-            <div class="enquiry-right land-com-form">
-              <h2>Demo Request</h2>
-              <form class="contact__form" method="post" action="http://rn53themes.net/themes/demo/landing-pages/mail.php">
-                <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                  Your message was sent successfully.
-                </div>
-                <ul>
-                  <li><input type="text" name="name" placeholder="Name"> <span class="floating-label">Name</span></li>
-                  <li><input type="text" name="email" placeholder="Email id"> <span class="floating-label">Email id</span></li>
-                  <li><input type="text" name="phone" placeholder="Phone"> <span class="floating-label">Phone</span></li>
-                  <li><input type="submit" name="submit" value="Download Now"></li>
-                  <li>
-                    <p>Praesent felis velit, maximus at dapibus semper, fermentum sagittis diam. <a href="#">Privacy Policy</a></p>
-                  </li>
-                </ul>
-              </form>
-            </div>
+        <!-- BOOKING FORM -->
+        <div class="land-3-banner-form fade-in four">
+          <div class="enquiry-right land-com-form">
+            <h2>Demo Request</h2>
+            <form class="contact__form" method="post" action="http://rn53themes.net/themes/demo/landing-pages/mail.php">
+              <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                Your message was sent successfully.
+              </div>
+              <ul>
+                <li><input type="text" name="name" placeholder="Name"> <span class="floating-label">Name</span></li>
+                <li><input type="text" name="email" placeholder="Email id"> <span class="floating-label">Email id</span></li>
+                <li><input type="text" name="phone" placeholder="Phone"> <span class="floating-label">Phone</span></li>
+                <li><input type="submit" name="submit" value="Download Now"></li>
+                <li>
+                  <p>Praesent felis velit, maximus at dapibus semper, fermentum sagittis diam. <a href="#">Privacy Policy</a></p>
+                </li>
+              </ul>
+            </form>
           </div>
         </div>
-        <div class="mov-cloud">
-          <div class="x1">
-            <div class="cloud"></div>
-          </div>
-          <div class="x2">
-            <div class="cloud"></div>
-          </div>
-
-          <div class="x3">
-            <div class="cloud"></div>
-          </div>
-
-          <!--<div class="x4">
+      </div>
+      <div class="mov-cloud">
+        <div class="x1">
+          <div class="cloud"></div>
+        </div>
+        <div class="x2">
           <div class="cloud"></div>
         </div>
 
-        <div class="x5">
+        <div class="x3">
+          <div class="cloud"></div>
+        </div>
+
+        <!--<div class="x4">
         <div class="cloud"></div>
-      </div>-->
-    </div>
+      </div>
+
+      <div class="x5">
+      <div class="cloud"></div>
+    </div>-->
   </div>
+</div>
 </div>
 </section>
 

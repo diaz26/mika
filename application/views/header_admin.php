@@ -107,6 +107,17 @@ if($this->session->userdata('is_logged_in')){
             </li>
             <?php
           }
+
+          if($this->session->userdata('ROL')=='admin'){
+            ?>
+            <li>
+              <a href="<?php echo base_url(); ?>index.php/clientes">
+                <i class="tim-icons icon-wallet-43"></i>
+                <p>Clientes</p>
+              </a>
+            </li>
+            <?php
+          }
          
           ?>
         </ul>

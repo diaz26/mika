@@ -71,13 +71,13 @@ CREATE TABLE `campanas_detalle_correo` (
   `date_create` datetime DEFAULT NULL,
   `date_update` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 /*Data for the table `campanas_detalle_correo` */
 
 LOCK TABLES `campanas_detalle_correo` WRITE;
 
-insert  into `campanas_detalle_correo`(`id`,`id_campana`,`nombre_correo`,`dia`,`email_mensaje`,`email_asunto`,`email_destinatario`,`email_remitente`,`date_create`,`date_update`) values (1,1,'registro',0,'hola buen día\r\n','[GRATIS] 3 pasos para limpiar tu zona V para evitar hongos','leonardo.jimenezp@gmail.com','',NULL,NULL);
+insert  into `campanas_detalle_correo`(`id`,`id_campana`,`nombre_correo`,`dia`,`email_mensaje`,`email_asunto`,`email_destinatario`,`email_remitente`,`date_create`,`date_update`) values (1,1,'registro',0,'hola buen día\r\n','[GRATIS] 3 pasos para limpiar tu zona V para evitar hongos','leonardo.jimenezp@gmail.com','',NULL,NULL),(2,1,'correo1',1,'prueba                       ','[GRATIS] SOLO por estos dos días, prueba',NULL,'prueba_correo@tiindo.com','2019-04-16 22:45:00','2019-04-16 22:45:00'),(3,1,'correo2',2,'prueba2','[GRATIS] SOLO por estos dos días, prueba2',NULL,'prueba_correo@tiindo.com','2019-04-16 22:52:11','2019-04-16 22:52:11'),(4,1,'correo3',2,'prueba4','[GRATIS] SOLO por estos dos días, prueba',NULL,'prueba_correo@tiindo.com','2019-04-16 22:56:46','2019-04-16 22:56:46'),(5,1,'correo4',4,'hola                       ','[GRATIS] SOLO por estos dos días, prueba2',NULL,'prueba_correo@tiindo.com','2019-04-16 22:57:54','2019-04-16 22:57:54');
 
 UNLOCK TABLES;
 
@@ -154,6 +154,68 @@ CREATE TABLE `clientes_estados` (
 LOCK TABLES `clientes_estados` WRITE;
 
 insert  into `clientes_estados`(`id`,`estado`,`date_create`,`date_update`) values (1,'REGISTRADO','2019-04-15 19:00:06','2019-04-15 19:00:06'),(2,'SEGUIMIENTO','2019-04-15 19:00:06','2019-04-15 19:00:06'),(3,'COMPRA','2019-04-15 19:00:06','2019-04-15 19:00:06');
+
+UNLOCK TABLES;
+
+/*Table structure for table `config_correos` */
+
+DROP TABLE IF EXISTS `config_correos`;
+
+CREATE TABLE `config_correos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `correo` varchar(100) DEFAULT NULL,
+  `contrasena` varchar(100) DEFAULT NULL,
+  `date_create` datetime DEFAULT NULL,
+  `date_update` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `config_correos` */
+
+LOCK TABLES `config_correos` WRITE;
+
+insert  into `config_correos`(`id`,`correo`,`contrasena`,`date_create`,`date_update`) values (1,'prueba_correo@tiindo.com',')42tYnJ9cyxW',NULL,NULL);
+
+UNLOCK TABLES;
+
+/*Table structure for table `config_landing` */
+
+DROP TABLE IF EXISTS `config_landing`;
+
+CREATE TABLE `config_landing` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_landing` varchar(100) DEFAULT NULL,
+  `head_text` blob,
+  `date_create` datetime DEFAULT NULL,
+  `date_update` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Data for the table `config_landing` */
+
+LOCK TABLES `config_landing` WRITE;
+
+insert  into `config_landing`(`id`,`nombre_landing`,`head_text`,`date_create`,`date_update`) values (1,'intiv_cap','aquí va el pixcel de facebook',NULL,NULL);
+
+UNLOCK TABLES;
+
+/*Table structure for table `dg_envio_email` */
+
+DROP TABLE IF EXISTS `dg_envio_email`;
+
+CREATE TABLE `dg_envio_email` (
+  `int` int(10) DEFAULT NULL,
+  `email_tipo` varchar(120) DEFAULT NULL,
+  `email_remitente` blob,
+  `email_destinatario` blob,
+  `email_asunto` blob,
+  `email_mensaje` blob,
+  `preparado` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `dg_envio_email` */
+
+LOCK TABLES `dg_envio_email` WRITE;
 
 UNLOCK TABLES;
 

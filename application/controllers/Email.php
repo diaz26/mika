@@ -30,7 +30,8 @@ class Email extends CI_Controller {
 
     public function config_correos($id = NULL)
 	{
-        $result['campanas'] = $this->model_email->carga_campanas($id);
+        $result['info_campanas'] = $this->model_email->carga_campanas($id);
+        $result['info_correos'] = $this->model_email->carga_campanas_correos($id);
         $this->load->view('header_admin');
 		$this->load->view('view_configura_correos',$result);
 		$this->load->view('footer_admin');

@@ -1,14 +1,14 @@
 <?php
-if($this->session->userdata('is_logged_in')){
-  setlocale(LC_MONETARY, "en_US");
-  ?>
+if ($this->session->userdata('is_logged_in')) {
+    setlocale(LC_MONETARY, "en_US");
+    ?>
 
   <div class="content">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1">
 
       </div>
-      <div class="col-md-7 ">
+      <div class="col-md-10 ">
         <div class="row" style=" text-align: center">
           <div class="col-12">
               <?php echo $this->session->flashdata('msg'); ?>
@@ -19,19 +19,36 @@ if($this->session->userdata('is_logged_in')){
           <div class="col-md-12" >
             <div class="card card-stats">
               <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 ">
+                <h3 class="card-title">Configuración de correos</h3>
+             </div>
+
+              </div>
                 <div class="row">
-                  <div class="col-md-4 ">
-                    <h3 class="card-title">Campañas</h3>
-                  </div>
-                  <div class="col-md-4 ">
-                    <!--h4 class="card-title"></h4-->
-                  </div>
-                  <div class="col-md-4">
-                    <center> <a href="#" class="btn btn-success animation-on-hover" data-toggle="modal" data-target="#renovar">crear</a> </center>
+                  <div class="col-md-12 col-12 ">
+                   <font style="">  Campaña: </font>
+                    <?php
+                        if (!empty($info_campanas)) {
+                                foreach ($info_campanas as $fila) {
+                                    ?>
+                                                                                        <spam>   <?php echo $fila->campana; ?>  </spam>
+                                                                                <?php
+                        }
+                            }
+
+                     ?>
+
                   </div>
 
                 </div>
-
+            <div class="row">
+                <div class="col-md-12 ">
+                <a href="<?php echo base_url(); ?>index.php/email/config_correos/<?php echo $fila->id; ?>">
+                    <img width="6%"  src="<?php echo base_url(); ?>images/agrega_correo.png" alt="editar">
+                    Agregar Correo
+                 </a>
+             </div>
 
               </div>
 
@@ -42,33 +59,35 @@ if($this->session->userdata('is_logged_in')){
                   <table class="table">
                     <tbody>
                       <tr>
-                        <th class="text-center">CAMPAÑA</th>
-                        <th class="text-center">CANT CORREOS</th>
-                        <th class="text-center"></th>
-                       
+                        <th class="text-center">Día</th>
+                        <th class="text-center">Nombre</th>
+                        <th class="text-center">Asunto</th>
+                        <th class="text-center">Remitente</th>
+                        <th class="text-center">Mensaje</th>
                       </tr>
+
                       <?php
-                      if (!empty($campanas)) {
-                        foreach ($campanas as $fila) {
-                        
-                          ?>
-                          <tr>
-                            <td class="text-center"><?php echo ($fila->campana); ?></td>
-                            <td class="text-center"><?php echo ($fila->cant_correo); ?></td>
-                            <td class="text-center">
-                            <a href=""><img width="5%"  src="<?php echo base_url(); ?>images/editar.png" alt="editar"></a>
-                            <a href=""><img width="5%" src="<?php echo base_url(); ?>images/eliminar.png" alt="editar"></a>    
-                                
-                            </td>
-                           
-                          </tr>
+                            if(!empty($info_correos)){
+                                foreach ($info_correos as $corr){
+                        ?>
+                        <tr>
+                         <td class="text-center"><?php echo ($corr->dia); ?></td>
+                         <td class="text-center"><?php echo ($corr->nombre_correo); ?></td>
+                         <td class="text-center"><?php echo ($corr->email_asunto); ?></td>
+                         <td class="text-center"><?php echo ($corr->email_remitente); ?></td>
+                         <td class="text-center"><?php echo ($corr->email_mensaje); ?></td>
 
-                          <?php
+                        </tr>
 
+                        <?php
+                            }
                         }
-                      }
+                        ?>
 
-                      ?>
+
+
+
+
                     </tbody>
                   </table>
                 </div>
@@ -79,7 +98,7 @@ if($this->session->userdata('is_logged_in')){
 
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-1">
 
       </div>
 
@@ -98,15 +117,15 @@ if($this->session->userdata('is_logged_in')){
           </div>
           <div class="modal-body">
             <?php
-            if (!empty($datos)){
-              ?>
+if (!empty($datos)) {
+        ?>
               <div class="row">
                 <div class="col-md-12">
                   <div class="row">
                     <div class="col-md-5 pr-md-1">
                       <div class="form-group">
                         <label>Nombre</label>
-                        <input type="text" disabled class="form-control" value="<?php echo $datos->nombre." ".$datos->apellido1; ?>" >
+                        <input type="text" disabled class="form-control" value="<?php echo $datos->nombre . " " . $datos->apellido1; ?>" >
                         <input type="hidden" name="id" value="<?php echo $datos->id; ?>">
                       </div>
                     </div>
@@ -114,7 +133,7 @@ if($this->session->userdata('is_logged_in')){
                     <div class="col-md-3 pr-md-1">
                       <div class="form-group">
                         <label>Valor ($USD)</label>
-                        <input disabled class="form-control" name="valor" value="<?php echo number_format($producto, 2);?>">
+                        <input disabled class="form-control" name="valor" value="<?php echo number_format($producto, 2); ?>">
                         <input type="hidden" name="saldo" value="<?php echo $saldototal; ?>">
                       </div>
                     </div>
@@ -150,13 +169,13 @@ if($this->session->userdata('is_logged_in')){
                           <span class="form-check-sign"></span>
                           <p style="font-size:14px ;  "><b>Mi cuenta Tiindo</b></p><hr>
                           <?php
-                          if ($saldototal>=$producto) {
-                            $color='green';
-                          }else {
-                            $color='red';
-                          }
-                          ?>
-                          <b>Saldo Disponible:</b> <br> <p style="color:<?php echo $color; ?>"> <?php echo money_format('%i',($saldototal)); ?> </p>
+if ($saldototal >= $producto) {
+            $color = 'green';
+        } else {
+            $color = 'red';
+        }
+        ?>
+                          <b>Saldo Disponible:</b> <br> <p style="color:<?php echo $color; ?>"> <?php echo money_format('%i', ($saldototal)); ?> </p>
                           <!--img src="<?php echo base_url(); ?>images/payu.png" width="40%" alt=""-->
                         </label>
                       </div>
@@ -166,8 +185,8 @@ if($this->session->userdata('is_logged_in')){
               </div>
               <hr>
               <?php
-            }
-            ?>
+}
+    ?>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -181,7 +200,7 @@ if($this->session->userdata('is_logged_in')){
   </div>
 
   <?php
-}else {
-  redirect("".base_url()."index.php/login/");
+} else {
+    redirect("" . base_url() . "index.php/login/");
 }
 ?>

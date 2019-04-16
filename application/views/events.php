@@ -25,13 +25,7 @@
   <script src="<?= base_url(); ?>assets/js/respond.min.js"></script>
   <![endif]-->
 </head>
-<!-- colores
-#F8F8F8 Gris claro
-#F1F1F1 Gris oscuro
-#76C2C8 Azul oscuro
-#87C6CB Azul claro
-#C5907B	Cafecito
--->
+
 <body>
   <!-- Preloader -->
   <div id="preloader">
@@ -47,7 +41,8 @@
           </div>
           <div class="land-3-top-contact">
             <ul>
-              <li><a href="#comprar" style="color:black">Comprar</a></li>
+              <li>Phone: 2486 2244</li>
+              <li>Email: business@businessmail.com</li>
             </ul>
           </div>
         </div>
@@ -57,8 +52,8 @@
 
   <section>
     <div class="land-full land-3-banner-full">
-      <div class="land-container" >
-        <div class="land-3-banner" >
+      <div class="land-container">
+        <div class="land-3-banner">
           <div class="land-3-banner-conte">
             <h1>Event Headline</h1>
             <h4>Sub Headline Aenean sed turpis volutpat</h4>

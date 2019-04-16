@@ -21,14 +21,14 @@ if ($this->session->userdata('is_logged_in')) {
               <div class="card-body">
               <div class="row">
                 <div class="col-md-12 ">
-                <h3 class="card-title">Configuración de correos</h3>
+                <h3 class="card-title">Agrega correos a campañas</h3>
              </div>
 
               </div>
                 <div class="row">
                   <div class="col-md-12 col-12 ">
                    <font style="">  Campaña: </font>
-                   <?php
+                    <?php
                         if (!empty($info_campanas)) {
                               
                          $id_campana=$info_campanas->id;
@@ -42,57 +42,82 @@ if ($this->session->userdata('is_logged_in')) {
                   </div>
 
                 </div>
-            <div class="row">
-                <div class="col-md-12 ">
-                <a href="<?php echo base_url(); ?>index.php/email/agrega_correos/<?php echo $id_campana; ?>">
-                    <img width="6%"  src="<?php echo base_url(); ?>images/agrega_correo.png" alt="editar">
-                    Agregar Correo
-                 </a>
-             </div>
 
               </div>
 
             </div>
+
+            <form action="<?php echo base_url(); ?>index.php/email/guard_correos" method="post">
+
+            <div class="row">
+                <div class="col-md-12">
+                
+                </div>                            
+            </div>
+
             <div class="card" style=" font-size: 13px">
               <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <th class="text-center">Día</th>
-                        <th class="text-center">Nombre</th>
-                        <th class="text-center">Asunto</th>
-                        <th class="text-center">Remitente</th>
-                        <th class="text-center">Mensaje</th>
-                      </tr>
 
-                      <?php
-                            if(!empty($info_correos)){
-                                foreach ($info_correos as $corr){
-                        ?>
-                        <tr>
-                         <td class="text-center"><?php echo ($corr->dia); ?></td>
-                         <td class="text-center"><?php echo ($corr->nombre_correo); ?></td>
-                         <td class="text-center"><?php echo ($corr->email_asunto); ?></td>
-                         <td class="text-center"><?php echo ($corr->email_remitente); ?></td>
-                         <td class="text-center"><?php echo ($corr->email_mensaje); ?></td>
+              <br>
+              <input type="hidden"  class="form-control" name="id_campana" 
+                value="<?php echo $id_campana; ?>">
+              <div class="row">
+                <div class="col-md-4"  style="font-weight: bold ">
+                    Escriba el nombre para identificar el correo<br>
+                    <input type="text"  class="form-control" name="name_correo" id="">
+                </div>                            
+                <div class="col-md-8"  style="font-weight: bold ">
+                    Escriba el asunto del correo<br>
+                    <input type="text"  class="form-control" name="asunto_correo" id="">
+                </div> 
+      
+               </div>
 
-                        </tr>
+               <br><br>
 
-                        <?php
-                            }
-                        }
-                        ?>
+               <div class="row">
+                    <div class="col-md-4">
+                    <font style="font-weight: bold "> Seleccione día de envío</font><br>
+                    <input type="number" class="form-control" name="dia_correo" id="">
+                    </div>                            
+                    <div class="col-md-4"  style="font-weight: bold ">
+                        Remitente<br>
+                        <input type="text"  class="form-control" name="remitente_correo" id="">
+                    </div>                            
+                    <div class="col-md-4"  style="font-weight: bold ">
+                        LandingPage<br>
+                        <input type="text"  class="form-control" name="landing_correo" id="">
+                    </div>                            
+                     
+               </div>
 
+                <br><br>
 
+               <div class="row">
+                    <div class="col-md-12">
+                    <font style="font-weight: bold ">Escriba el mensaje del correo</font><br>
+                    <textarea class="form-control" name="mensaje_correo" id="" cols="30" rows="10">
+                       </textarea>
+                    
+                    </div> 
+                                         
+               </div>
 
+            <br><br><br>
 
+               <div class="row">
+                    <div class="col-md-12">
+                    <a href="" class="btn btn-secondary animation-on-hover btn-sm" >Cancelar</a>
+                    <button class="btn btn-success animation-on-hover btn-sm" type="submit">Guardar</button>
+                      
+                    </div>                            
+               </div>
 
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </div>
+            
+            </form>
+            
           </div>
 
 
@@ -169,12 +194,12 @@ if (!empty($datos)) {
                           <span class="form-check-sign"></span>
                           <p style="font-size:14px ;  "><b>Mi cuenta Tiindo</b></p><hr>
                           <?php
-if ($saldototal >= $producto) {
-            $color = 'green';
-        } else {
-            $color = 'red';
-        }
-        ?>
+                            if ($saldototal >= $producto) {
+                                        $color = 'green';
+                                    } else {
+                                        $color = 'red';
+                                    }
+                         ?>
                           <b>Saldo Disponible:</b> <br> <p style="color:<?php echo $color; ?>"> <?php echo money_format('%i', ($saldototal)); ?> </p>
                           <!--img src="<?php echo base_url(); ?>images/payu.png" width="40%" alt=""-->
                         </label>

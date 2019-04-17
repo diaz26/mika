@@ -12,11 +12,16 @@ class Register extends CI_Controller
 
     public function index($ban = null)
     {
-        $this->load->view('view_login', $ban);
+      //if ((isset($_POST['name'])) AND (isset($_POST['email']))) {
+        $this->load->view('view_completed_register', $ban);
+      /*}else {
+        redirect("Errorpage");
+      }*/
+
     }
 
-   
 
-   
+
+
 
 }

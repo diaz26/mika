@@ -38,25 +38,6 @@
 
 -->
 <body>
-  <!-- Preloader -->
-
-  <section>
-    <div class="land-full land-3-top-full">
-      <div class="land-container">
-        <div class="land-3-top">
-          <div class="land-3-top-logo">
-            <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>assets/images/logo.png"></a>
-          </div>
-          <div class="land-3-top-contact">
-            <ul>
-              <li><a href="<?= base_url(); ?>index.php/login" style="color:white">Ingresar</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <hr>
   <section>
     <div class="land-full land-3-dwn-full">
       <div class="land-container">
@@ -84,10 +65,11 @@
 
               <div class="land-com-form">
                 <h2 style="color:#999999">Regístrate</h2>
-                <form class="contact__form" method="post" action="<?= base_url(); ?>index.php/register">
+                <form class="contact__form" method="post" action="<?= base_url(); ?>">
                   <ul>
                     <li><input type="text" name="name" placeholder="Nombre" required></li>
                     <li><input type="text" name="email" placeholder="Correo electrónico" required></li>
+                    <li><input type="hidden" name="" placeholder="Phone"></li>
                     <li><input type="submit" value="Registrarme"></li>
                     <li><p style="color:#999999;font-size: 15px">Regístrate para mantenerte informado de nuestras promociones.</p></li>
                   </ul>
@@ -102,113 +84,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="land-full land-4-agen-full">
-      <div class="land-container">
-        <div class="land-3-agen">
-          <div class="row">
-            <div class="col-lg-6 col-md-6 col-xs-6 col-12">
-              <div class="land-3-agen-left">
-                <h4 style="color:#999999">MODOS DE USO</h4>
-              </div>
-              <div class="land-3-agen-right">
-                <ul>
-                  <li>
-                    <p style="color:#AFAFAF">APLICA MIIKA INTIIV EN CUALQUIER OCASIÓN OPORTUNA EN LA ZONA V PARA MAYOR PROTECCIÓN E HIGIENE.</p>
-                  </li>
-                  <li>
-                    <p style="color:#AFAFAF">NO REQUIERE ENJUAGUE.</p>
-                  </li>
-                  <li>
-                    <p style="color:#AFAFAF">NO CUENTA CON UN LÍMITE DE APLICACIONES DIARIAS.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-xs-6 col-12" style="background-color: #F8F8F8">
-              <section>
-                <div class="land-full">
-                  <div class="row">
-                    <div class="col-lg-5 col-md-5 col-xs-5 col-5">
-                      <h5 style="color:#999999">COMPONENTES</h5>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-xs-7 col-7">
-                      <P style="color:#C5907B">
-                        TECNOLOGIA 100% NATURAL - PH BALANCEADO 5.5.
-                      </p>
-                      <P style="color:#C5907B">
-                        EXTRACTOS NATURALES: MANZANILLA Y ALOE VERA.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </section>
-              <hr>
-              <section>
-                <div class="land-full" style="background-color: #F1F1F1">
-                  <div class="row">
-                    <div class="col-lg-5 col-md-5 col-xs-5 col-5">
-                      <h5 style="color:#999999">BENEFICIOS</h5>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-xs-7 col-7">
-                      <P style="color:#C5907B">
-                        BALANCEA EL PH
-                      </p>
-                      <P style="color:#C5907B">
-                        PREVIENE EL MAL HOLOR
-                      </p>
-                      <P style="color:#C5907B">
-                        DISMINUYE EL FLUJO
-                      </p>
-                      <P style="color:#C5907B">
-                        AUMENTA LA SENSACION DE LIMPIEZA Y FRESCURA
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-          <hr>
-          <div class="row">
-
-            <div class="col-lg-12 col-md-12 col-xs-12 col-12">
-              <center><h3 style="color:#999999;padding-bottom: 9px">OCASIONES DE CONSUMO</h3></center>
-              <div class="land-3-agen-left">
-                <h5 style="color:#C5907B">EN CUALQUIER OCASION OPORTUNA</h5>
-                <h5 style="color:#C5907B">EN CUALQUIER MOMENTO, EN CUALQUIER LUGAR</h5>
-              </div>
-              <div class="land-3-agen-right">
-                <ul>
-                  <li>
-                    <p style="color:#AFAFAF">ANTES Y DESPUES DE CUALQUIER EXPOSICIÓN</p>
-                  </li>
-                  <li>
-                    <p style="color:#AFAFAF">ANTES Y DESPUES DE TENER RELACIONES SEXUALES</p>
-                  </li>
-                  <li>
-                    <p style="color:#AFAFAF">ANTES Y DESPUES DE IR A LA PISCINA O LA PLAYA</p>
-                  </li>
-                  <li>
-                    <p style="color:#AFAFAF">ANTES Y DESPUES DE IR AL BAÑO</p>
-                  </li>
-                  <li>
-                    <p style="color:#AFAFAF">DESPUES DE REALIZAR CUALQUIER ACTIVIDAD FÍSICA</p>
-                  </li>
-                  <li>
-                    <p style="color:#AFAFAF">EN NUESTROS VIAJES</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
 
 
   <!--SCRIPTS-->

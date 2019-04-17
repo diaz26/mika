@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
   <!--== CSS FILES ==-->
   <link href="<?= base_url(); ?>assets/css/event.css" rel="stylesheet" />
+  <link href="<?= base_url(); ?>assets/css/nucleo-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,41 +46,59 @@
       <div class="land-container">
         <div class="land-3-top">
           <div class="land-3-top-logo">
-            <a href="#"><img src="<?= base_url(); ?>assets/images/logo.png"></a>
+            <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>assets/images/logo.png"></a>
           </div>
           <div class="land-3-top-contact">
             <ul>
-              <li><a href="#comprar" style="color:black">Comprar</a></li>
+              <li> <a href="<?= base_url(); ?>index.php/login" style="color:white">Ingresar</a></li>
+              <li><a href="#descargar" style="color:white">Descargar</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <section>
+  <hr>
+  <section id="descargar">
     <div class="land-full land-3-dwn-full">
       <div class="land-container">
         <div class="land-3-dwn">
-          <div class="land-3-dwn-img">
-            <img src="<?= base_url(); ?>assets/images/banner.jpg" alt="" class="land-1-pro-img">
-          </div>
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-xs-12 col-12">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-xs-12 col-12">
 
-          <div class="land-3-dwn-right" style="background-color: #F8F8F8">
-            <h2 style="color:#999999">INTIIV</h2>
-            <div class="row">
-              <div class="col-lg-5 col-md-5 col-xs-5 col-12">
+                  <img src="<?= base_url(); ?>assets/images/banner.jpg" alt="" width="100%" >
 
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-12" style="background-color: #F8F8F8">
+                  <center><img src="<?= base_url(); ?>assets/images/intiv.jpg" alt=""></center>
+                  <p style="color:#C7C7C7; ">INTIIV ES EL PRIMER PRODUCTO PORTABLE PARA LA HIGIENE ÍNTIMA FEMENINA EN EL MUNDO.</p>
+                </div>
               </div>
-              <div class="col-lg-7 col-md-7 col-xs-7 col-12">
-                <p style="color:#C7C7C7">ES EL PRIMER PRODUCTO PORTABLE PARA LA HIGIENE ÍNTIMA FEMENINA EN EL MUNDO.</p>
+              <div class="row">
+                <p style="color:#AFAFAF;background-color: #F1F1F1">CON SU FÓRMULA BASADA EN TECNOLOGIA NATURAL MANTIENE UNA HIGIENE Y PROTECCIÓN ÓPTIMA DE NUESTRA ZONA INTIMA, BALANCEA SU PH, PREVIENE EL MAL OLOR Y DISMINUYE EL FLUJO.</p>
+                <p style="color: #76C2C8;">HIGIENE INSTANTÁNEA SIN ENJUAGUE.</p>
               </div>
 
             </div>
+            <div class="col-lg-4 col-md-4 col-xs-12 col-12">
 
-            <p style="color:#AFAFAF;background-color: #F1F1F1">CON SU FÓRMULA BASADA EN TECNOLOGIA NATURAL MANTIENE UNA HIGIENE Y PROTECCION ÓPTIA DE NUESTRA ZONA INTIMA, BALANCEA SU PH, PREVIENE EL MAL OLOR Y DISMINUYE EL FLUJO</p>
-            <p style="color: #76C2C8">HIGIENE INSTANTÁNEA SI ENJUAGUE.</p>
+              <div class="land-com-form">
+                <h2 style="color:#999999">Regístrate</h2>
+                <form method="post" action="<?= base_url(); ?>index.php/register">
+                  <ul>
+                    <li><input type="text" name="name" placeholder="Nombre" required></li>
+                    <li><input type="email" name="email" placeholder="Correo electrónico" required></li>
+                    <li><input type="submit" value="Descargar"></li>
+                    <li><p style="color:#999999;font-size: 15px">Regístrate para mantenerte informado de nuestras promociones.</p></li>
+                  </ul>
+                </form>
+
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -127,34 +146,33 @@
                 </div>
 
               </section>
-
+              <hr>
               <section>
-                <div class="land-full">
-                  <div class="land-3-agen" style="background-color: #F1F1F1">
-                    <div class="row">
-                      <div class="col-lg-5 col-md-5 col-xs-5 col-5">
-                        <h5 style="color:#999999">BENEFICIOS</h5>
-                      </div>
-                      <div class="col-lg-7 col-md-7 col-xs-7 col-7">
-                        <P style="color:#C5907B">
-                          BALANCEA EL PH
-                        </p>
-                        <P style="color:#C5907B">
-                          PREVIENE EL MAL HOLOR
-                        </p>
-                        <P style="color:#C5907B">
-                          DISMINUYE EL FLUJO
-                        </p>
-                        <P style="color:#C5907B">
-                          AUMENTA LA SENSACION DE LIMPIEZA Y FRESCURA
-                        </p>
-                      </div>
+                <div class="land-full" style="background-color: #F1F1F1">
+                  <div class="row">
+                    <div class="col-lg-5 col-md-5 col-xs-5 col-5">
+                      <h5 style="color:#999999">BENEFICIOS</h5>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-xs-7 col-7">
+                      <P style="color:#C5907B">
+                        BALANCEA EL PH
+                      </p>
+                      <P style="color:#C5907B">
+                        PREVIENE EL MAL HOLOR
+                      </p>
+                      <P style="color:#C5907B">
+                        DISMINUYE EL FLUJO
+                      </p>
+                      <P style="color:#C5907B">
+                        AUMENTA LA SENSACION DE LIMPIEZA Y FRESCURA
+                      </p>
                     </div>
                   </div>
                 </div>
               </section>
             </div>
           </div>
+          <hr>
           <div class="row">
 
             <div class="col-lg-12 col-md-12 col-xs-12 col-12">
@@ -194,38 +212,6 @@
     </div>
   </section>
 
-
-
-
-  <!-- LOCATION -->
-  <section>
-    <div class="land-full land-4-agen-full">
-      <div class="land-container">
-        <div class="land-3-agen">
-          <div class="land-3-agen-left">
-            <h2>Location</h2>
-            <p>28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</p>
-            <p><b>Phone:</b> +01 2486 2244</p>
-            <p><b>Email:</b> business@businessmail.com</p>
-          </div>
-          <div class="land-3-agen-right">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142631.2438598475!2d-91.50976218931385!3d39.71772602403598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b2d386f6e2619%3A0x7f15825064115956!2sIllinois%2C+USA!5e0!3m2!1sen!2sin!4v1528565167741" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COPY RIGHTS -->
-  <section>
-    <div class="land-full land-1-foot-full">
-      <div class="land-container">
-        <div class="land-1-foot-text">
-          <p>Copyrights © 2018  <a href="http://rn53themes.net/">Rn53themes.net</a> All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!--SCRIPTS-->
   <script src="<?= base_url(); ?>assets/js/main.min.js"></script>

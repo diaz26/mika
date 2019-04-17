@@ -87,7 +87,7 @@
                 <form class="contact__form" method="post" action="<?= base_url(); ?>index.php/register">
                   <ul>
                     <li><input type="text" name="name" placeholder="Nombre" required></li>
-                    <li><input type="text" name="email" placeholder="Correo electrónico" required></li>
+                    <li><input type="email" name="email" placeholder="Correo electrónico" required></li>
                     <li><input type="submit" value="Registrarme"></li>
                     <li><p style="color:#999999;font-size: 15px">Regístrate para mantenerte informado de nuestras promociones.</p></li>
                   </ul>

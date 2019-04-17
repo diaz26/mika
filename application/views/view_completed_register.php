@@ -37,49 +37,58 @@
 #C7C7C7 gris letra clara
 
 -->
-<body>
+<body style="background-color: #F8F8F8">
   <section>
-    <div class="land-full land-3-dwn-full">
+    <div class="land-full land-3-top-full">
       <div class="land-container">
-        <div class="land-3-dwn">
-          <div class="row">
-            <div class="col-lg-8 col-md-8 col-xs-12 col-12">
+        <div class="land-3-top">
+          <div class="land-3-top-logo">
+            <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>assets/images/logo.png"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+
+  <section>
+    <div class="land-full land-4-agen-full" >
+      <div class="land-container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12 col-12">
+            <div class="land-3-agen">
               <div class="row">
-                <div class="col-lg-8 col-md-8 col-xs-12 col-12">
-
-                  <img src="<?= base_url(); ?>assets/images/banner.jpg" alt="" width="100%" >
-
+                <div class="col-lg-6 col-md-6 col-xs-12 col-12">
+                  <center><img src="<?= base_url(); ?>assets/images/logo.png" width="100%" alt=""> </center>
                 </div>
-                <div class="col-lg-4 col-md-4 col-xs-12 col-12" style="background-color: #F8F8F8">
-                  <center><img src="<?= base_url(); ?>assets/images/intiv.jpg" alt=""></center>
-                  <p style="color:#C7C7C7; ">INTIIV ES EL PRIMER PRODUCTO PORTABLE PARA LA HIGIENE ÍNTIMA FEMENINA EN EL MUNDO.</p>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-12">
+                  <center><h4 style="color: #999999">BIENVENIDA A NUESTRA COMUNIDAD</h4></center>
                 </div>
               </div>
-              <div class="row">
-                <p style="color:#AFAFAF;background-color: #F1F1F1">CON SU FÓRMULA BASADA EN TECNOLOGIA NATURAL MANTIENE UNA HIGIENE Y PROTECCIÓN ÓPTIMA DE NUESTRA ZONA INTIMA, BALANCEA SU PH, PREVIENE EL MAL OLOR Y DISMINUYE EL FLUJO.</p>
-                <p style="color: #76C2C8;">HIGIENE INSTANTÁNEA SIN ENJUAGUE.</p>
+              <hr>
+              <div class="land-3-agen-left">
+                <h5 style="color:#C5907B">COMPLETA TU REGISTRO</h5>
               </div>
-
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-12 col-12">
-
-              <div class="land-com-form">
-                <h2 style="color:#999999">Regístrate</h2>
-                <form class="contact__form" method="post" action="<?= base_url(); ?>">
-                  <ul>
-                    <li><input type="text" name="name" placeholder="Nombre" required></li>
-                    <li><input type="text" name="email" placeholder="Correo electrónico" required></li>
-                    <li><input type="hidden" name="" placeholder="Phone"></li>
-                    <li><input type="submit" value="Registrarme"></li>
-                    <li><p style="color:#999999;font-size: 15px">Regístrate para mantenerte informado de nuestras promociones.</p></li>
-                  </ul>
-                </form>
-
+              <div class="land-3-agen-right">
+                <ul>
+                  <li>
+                    <p style="color:#AFAFAF">REVISA TU CORREO ELECTRÓNICO</p>
+                  </li>
+                  <li>
+                    <p style="color:#AFAFAF">EN LA BANDEJA DE ENTRADA O EN LA BANDEJA DE SPAM TE LLEGARÁ UN CORREO CON EL ENLACE PARA TERMINAR TU REGISTRO</p>
+                  </li>
+                  <li>
+                    <p style="color:#AFAFAF">CLIC EN EL ENLACE</p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+          <div class="col-lg-6 col-md-6 col-xs-12 col-12">
 
+          </div>
         </div>
+
       </div>
     </div>
   </section>

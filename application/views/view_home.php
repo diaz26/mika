@@ -49,14 +49,14 @@
           </div>
           <div class="land-3-top-contact">
             <ul>
-              <li><a href="#comprar" style="color:black">Comprar</a></li>
+              <li><a href="<?= base_url(); ?>index.php/login" style="color:white">Ingresar</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  <hr>
   <section>
     <div class="land-full land-3-dwn-full">
       <div class="land-container">

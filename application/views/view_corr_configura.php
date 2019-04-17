@@ -97,10 +97,6 @@ if ($this->session->userdata('is_logged_in')) {
                         }
                         ?>
 
-
-
-
-
                     </tbody>
                   </table>
                 </div>

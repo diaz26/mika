@@ -115,15 +115,17 @@ if ($this->session->userdata('is_logged_in')) {
                     <div class="col-md-12">
                     <font style="font-weight: bold ">Escriba el mensaje del correo</font><br>
                     <div></div>
+                   
+                    <textarea class="form-control" name="mensaje_correo"  id="mensaje_correo" cols="30" rows="10">
+                    </textarea>
                     <script>
-                        $('#summernote').summernote({
+                        $('#mensaje_correo').summernote({
                             placeholder: 'ingrese el mensaje de su correo',
                             tabsize: 2,
-                            height: 100
+                            height: 200
                         });
-                    </script>
-                    <textarea class="form-control" name="mensaje_correo"  id="summernote" cols="30" rows="10">
-                       </textarea>
+                    </script>    
+
                     
                     </div> 
                                          

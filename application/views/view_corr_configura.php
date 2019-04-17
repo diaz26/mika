@@ -56,7 +56,7 @@ if ($this->session->userdata('is_logged_in')) {
             <div class="card" style=" font-size: 13px">
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table">
+                  <table class="table" border="0">
                     <tbody>
                       <tr>
                         <th class="text-center">Día</th>
@@ -64,6 +64,7 @@ if ($this->session->userdata('is_logged_in')) {
                         <th class="text-center">Asunto</th>
                         <th class="text-center">Remitente</th>
                         <th class="text-center">Mensaje</th>
+                        <th class="text-center"></th>
                       </tr>
 
                       <?php
@@ -76,6 +77,18 @@ if ($this->session->userdata('is_logged_in')) {
                          <td class="text-center"><?php echo ($corr->email_asunto); ?></td>
                          <td class="text-center"><?php echo ($corr->email_remitente); ?></td>
                          <td class="text-center"><?php echo ($corr->email_mensaje); ?></td>
+                         <td class="text-center" WIDTH="300">
+
+                         <a href="">
+                            <img width="20%"  src="<?php echo base_url(); ?>images/estadisticas.jpg" alt="editar">  
+                         </a>   
+                          <a href="">
+                            <img width="20%"  src="<?php echo base_url(); ?>images/editar.png" alt="editar">  
+                          </a> 
+                           <a href="">
+                              <img width="20%" src="<?php echo base_url(); ?>images/eliminar.png" alt="eliminar">
+                           </a> 
+                         </td>
 
                         </tr>
 

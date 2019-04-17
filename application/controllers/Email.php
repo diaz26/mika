@@ -42,6 +42,7 @@ class Email extends CI_Controller {
 	{
         $result['info_campanas'] = $this->model_email->carga_campanas($id);
         $result['info_correos'] = $this->model_email->carga_campanas_correos($id);
+        $result['deta_correos'] = $this->model_email->cargar_correos_detalle($id);
         $this->load->view('header_admin');
 		$this->load->view('view_corr_agrega',$result);
 		$this->load->view('footer_admin');
@@ -56,6 +57,8 @@ class Email extends CI_Controller {
         $remitente_correo =$this->input->post('remitente_correo');
         $landing_correo =$this->input->post('landing_correo');
         $mensaje_correo =$this->input->post('mensaje_correo');
+
+        
 
         if(!empty($name_correo) and 
            !empty($asunto_correo) and 
@@ -80,6 +83,8 @@ class Email extends CI_Controller {
 
 
         }
+
+        
 
 
 

@@ -55,6 +55,13 @@ class Model_email extends CI_Model
         return $query->result();
     }
 
+    public function cargar_correos_detalle($id = null){
+      $sql="SELECT * FROM campanas_detalle_correo 
+            WHERE id_campana='$id';";
+      $query = $this->db->query($sql);
+      return $query->result();
+    }
+
 
     //correos
     public function plantilla_correo($correo_destinatario,$asunto_mensaje){

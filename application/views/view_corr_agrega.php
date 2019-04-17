@@ -1,3 +1,8 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.js"></script>
+</head>
 <?php
 if ($this->session->userdata('is_logged_in')) {
     setlocale(LC_MONETARY, "en_US");
@@ -26,23 +31,30 @@ if ($this->session->userdata('is_logged_in')) {
 
               </div>
                 <div class="row">
-                  <div class="col-md-12 col-12 ">
+                  <div class="col-md-4 col-4 ">
                    <font style="">  Campaña: </font>
                     <?php
                         if (!empty($info_campanas)) {
                               
                          $id_campana=$info_campanas->id;
                             echo $info_campanas->campana; 
-                                       
                         }
-                            
-
                      ?>
-
+                  </div>
+                  <div class="col-md-4 col-4 ">
+                     <?php
+                        if (!empty($deta_correos)) {
+                            foreach ($deta_correos as $row){
+                                echo $row->nombre_correo.":   ".$row->dia."   |   ";
+                            }
+                        }
+                     ?>
+                  </div>
+                  <div class="col-md-4 col-4 ">
+                 
                   </div>
 
                 </div>
-
               </div>
 
             </div>
@@ -52,11 +64,17 @@ if ($this->session->userdata('is_logged_in')) {
             <div class="row">
                 <div class="col-md-12">
                 
-                </div>                            
+                </div>   
+                       
             </div>
 
             <div class="card" style=" font-size: 13px">
               <div class="card-body">
+              <div class="">
+                <div class="">
+                
+                </div>
+              </div>
 
               <br>
               <input type="hidden"  class="form-control" name="id_campana" 
@@ -96,7 +114,15 @@ if ($this->session->userdata('is_logged_in')) {
                <div class="row">
                     <div class="col-md-12">
                     <font style="font-weight: bold ">Escriba el mensaje del correo</font><br>
-                    <textarea class="form-control" name="mensaje_correo" id="" cols="30" rows="10">
+                    <div></div>
+                    <script>
+                        $('#summernote').summernote({
+                            placeholder: 'ingrese el mensaje de su correo',
+                            tabsize: 2,
+                            height: 100
+                        });
+                    </script>
+                    <textarea class="form-control" name="mensaje_correo"  id="summernote" cols="30" rows="10">
                        </textarea>
                     
                     </div> 

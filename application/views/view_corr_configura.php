@@ -77,20 +77,53 @@ if ($this->session->userdata('is_logged_in')) {
                          <td class="text-center"><?php echo ($corr->email_asunto); ?></td>
                          <td class="text-center"><?php echo ($corr->email_remitente); ?></td>
                          <td class="text-center"><?php echo ($corr->email_mensaje); ?></td>
-                         <td class="text-center" WIDTH="300">
-
-                         <a href="">
-                            <img width="20%"  src="<?php echo base_url(); ?>images/estadisticas.jpg" alt="editar">  
-                         </a>   
-                          <a href="">
-                            <img width="20%"  src="<?php echo base_url(); ?>images/editar.png" alt="editar">  
-                          </a> 
-                           <a href="">
-                              <img width="20%" src="<?php echo base_url(); ?>images/eliminar.png" alt="eliminar">
-                           </a> 
+                         <td class="text-center" WIDTH="100">
+                           <div class="row">
+                             <div class="col-md-12 col-12">
+                             <div class="btn-group">
+                                <button data-toggle="modal" data-target="#modal_estadistica" class="btn btn-icon btn-round btn-success">
+                                  <i class="tim-icons icon-chart-bar-32"></i></button>
+                                <a href="<?php echo base_url(); ?>index.php/email/agrega_correos/<?php echo $id_campana; ?>/<?php echo $corr->id; ?>"  class="btn btn-icon btn-round btn-info" >
+                                  <i class="tim-icons icon-pencil"></i></a>
+                                <button data-toggle="modal" data-target="#modal_eliminar<?php echo $corr->id; ?>" class="btn btn-icon btn-round btn-danger">
+                                  <i class="tim-icons icon-simple-remove"></i></button>
+                              </div>
+                             </div>
+                           </div>
                          </td>
-
                         </tr>
+                        <!-- Ventanas modales -->
+                        <!-- Eliminar Modal -->
+                        <div class="modal fade" id="modal_eliminar<?php echo $corr->id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header justify-content-center">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                  <i class="tim-icons icon-simple-remove"></i>
+                                </button>
+                                <h6 class="title title-up">¿Está seguro que desea eliminar el correo?</h6>
+                              </div>
+                              <div class="modal-body">
+                                <form action="<?php echo base_url(); ?>index.php/email/elimina_correo" method="post">
+                                  <p>
+                                    <br>
+                                    Nombre del correo:<?php echo ($corr->nombre_correo); ?><br>
+                                    Día de envío: <?php echo ($corr->dia); ?>
+                                    <input type="hidden" name="id_elimina" value="<?php echo $corr->id; ?>">
+                                    <input type="hidden" name="id_campana" value="<?php echo $id_campana; ?>">
+                                    
+                                  </p>
+
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Canacelar</button>
+                                    <button type="submit" class="btn btn-danger" >Eliminar</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  End Modal -->
 
                         <?php
                             }

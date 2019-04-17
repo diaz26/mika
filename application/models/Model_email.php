@@ -62,6 +62,14 @@ class Model_email extends CI_Model
       return $query->result();
     }
 
+    public function cargar_el_correos_detalle($id = null, $id_correo = null){
+      $sql=" SELECT * FROM campanas_detalle_correo 
+      WHERE id_campana='$id' AND id='$id_correo' ;";
+      $query = $this->db->query($sql);
+      return $query->row();
+    }
+
+
 
     //correos
     public function plantilla_correo($correo_destinatario,$asunto_mensaje){
@@ -142,13 +150,23 @@ class Model_email extends CI_Model
       }/*foreach*/
     }/*function envio_correos_pendientes_bd*/
 
-    public function guarda_correo($data){
-
-     $rta= $this->db->insert("campanas_detalle_correo",$data);
+    public function guarda_correo($id,$data){
+      $rta= $this->db->update('campanas_detalle_correo', $data, array('id'=> $id));
       return $rta;
 
     }
 
+    public function inserta_correo($data){
 
+      $rta= $this->db->insert("campanas_detalle_correo",$data);
+       return $rta;
+ 
+     }
+
+    public function eliminar_correo($id= NULL){
+        
+      $responce=$this->db->delete("campanas_detalle_correo", array("id"=>$id));
+      return $responce;
+  }
 
 }

@@ -26,7 +26,7 @@ if ($this->session->userdata('is_logged_in')) {
               <div class="card-body">
               <div class="row">
                 <div class="col-md-12 ">
-                <h3 class="card-title">Agrega correos a campañas</h3>
+                <h3 class="card-title"><?php echo $flag_opera;  ?> correos a campañas</h3>
              </div>
 
               </div>
@@ -77,16 +77,39 @@ if ($this->session->userdata('is_logged_in')) {
               </div>
 
               <br>
+              <?php
+              $id_correo="" ;
+              $nombre_correo="" ;
+              $asunto_correo="" ;
+              $dia_correo="";
+              $remitente_correo="";
+              $mensaje_correo="";
+                 if (!empty($deta_el_correos)) {
+                  $id_correo= $deta_el_correos->id;
+                  $nombre_correo= $deta_el_correos->nombre_correo;
+                  $asunto_correo= $deta_el_correos->email_asunto;
+                  $dia_correo= $deta_el_correos->dia;
+                  $remitente_correo= $deta_el_correos->email_remitente;
+                  $mensaje_correo= $deta_el_correos->email_mensaje;
+                  
+                }
+              
+              ?>
               <input type="hidden"  class="form-control" name="id_campana" 
                 value="<?php echo $id_campana; ?>">
+                <input type="hidden"  class="form-control" name="id_correo" 
+                value="<?php echo $id_correo; ?>">
+
               <div class="row">
                 <div class="col-md-4"  style="font-weight: bold ">
                     Escriba el nombre para identificar el correo<br>
-                    <input type="text"  class="form-control" name="name_correo" id="">
+                    <input type="text"  class="form-control" name="name_correo" id="" 
+                    value="<?php echo $nombre_correo ?>">
                 </div>                            
                 <div class="col-md-8"  style="font-weight: bold ">
                     Escriba el asunto del correo<br>
-                    <input type="text"  class="form-control" name="asunto_correo" id="">
+                    <input type="text"  class="form-control" name="asunto_correo" id=""
+                     value="<?php echo $asunto_correo; ?>">
                 </div> 
       
                </div>
@@ -96,11 +119,13 @@ if ($this->session->userdata('is_logged_in')) {
                <div class="row">
                     <div class="col-md-4">
                     <font style="font-weight: bold "> Seleccione día de envío</font><br>
-                    <input type="number" class="form-control" name="dia_correo" id="">
+                    <input type="number" class="form-control" name="dia_correo" id=""
+                    value="<?php echo $dia_correo ?>">
                     </div>                            
                     <div class="col-md-4"  style="font-weight: bold ">
                         Remitente<br>
-                        <input type="text"  class="form-control" name="remitente_correo" id="">
+                        <input type="text"  class="form-control" name="remitente_correo" id=""
+                        value="<?php echo $remitente_correo ?>">
                     </div>                            
                     <div class="col-md-4"  style="font-weight: bold ">
                         LandingPage<br>
@@ -117,7 +142,8 @@ if ($this->session->userdata('is_logged_in')) {
                     <div></div>
                    
                     <textarea class="form-control" name="mensaje_correo"  id="mensaje_correo" cols="30" rows="10">
-                    </textarea>
+                    <?php echo $mensaje_correo; ?>  
+                  </textarea>
                     <script>
                         $('#mensaje_correo').summernote({
                             placeholder: 'ingrese el mensaje de su correo',
@@ -135,7 +161,7 @@ if ($this->session->userdata('is_logged_in')) {
 
                <div class="row">
                     <div class="col-md-12">
-                    <a href="" class="btn btn-secondary animation-on-hover btn-sm" >Cancelar</a>
+                    <a href="<?php echo base_url(); ?>index.php/email/config_correos/<?php echo $id_campana; ?>" class="btn btn-secondary animation-on-hover btn-sm" >Cancelar</a>
                     <button class="btn btn-success animation-on-hover btn-sm" type="submit">Guardar</button>
                       
                     </div>                            

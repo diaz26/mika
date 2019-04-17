@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
   <!--== CSS FILES ==-->
   <link href="<?= base_url(); ?>assets/css/event.css" rel="stylesheet" />
+  <link href="<?= base_url(); ?>assets/css/nucleo-icons.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,7 +50,8 @@
           </div>
           <div class="land-3-top-contact">
             <ul>
-              <li><a href="<?= base_url(); ?>index.php/login" style="color:white">Ingresar</a></li>
+              <li> <a href="<?= base_url(); ?>index.php/login" style="color:white">Ingresar</a></li>
+              <li><a href="#descargar" style="color:white">Descargar</a></li>
             </ul>
           </div>
         </div>
@@ -57,7 +59,7 @@
     </div>
   </section>
   <hr>
-  <section>
+  <section id="descargar">
     <div class="land-full land-3-dwn-full">
       <div class="land-container">
         <div class="land-3-dwn">
@@ -88,7 +90,7 @@
                   <ul>
                     <li><input type="text" name="name" placeholder="Nombre" required></li>
                     <li><input type="email" name="email" placeholder="Correo electrónico" required></li>
-                    <li><input type="submit" value="Registrarme"></li>
+                    <li><input type="submit" value="Descargar"></li>
                     <li><p style="color:#999999;font-size: 15px">Regístrate para mantenerte informado de nuestras promociones.</p></li>
                   </ul>
                 </form>

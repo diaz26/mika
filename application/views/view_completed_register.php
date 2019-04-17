@@ -45,6 +45,12 @@
           <div class="land-3-top-logo">
             <a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>assets/images/logo.png"></a>
           </div>
+          <div class="land-3-top-contact">
+            <ul>
+              <li> <a href="<?= base_url(); ?>index.php/login" style="color:white">Ingresar</a></li>
+              <li><a href="#comprar" style="color:white">Comprar</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -55,7 +61,7 @@
     <div class="land-full land-4-agen-full" >
       <div class="land-container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-12 col-12">
+          <div class="col-lg-6 col-md-6 col-xs-12 col-12 ml-auto mr-auto">
             <div class="land-3-agen">
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-xs-12 col-12">
@@ -83,9 +89,6 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-xs-12 col-12">
-
           </div>
         </div>
 

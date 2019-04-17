@@ -84,7 +84,7 @@
 
               <div class="land-com-form">
                 <h2 style="color:#999999">Regístrate</h2>
-                <form class="contact__form" method="post" action="<?= base_url(); ?>index.php/register">
+                <form method="post" action="<?= base_url(); ?>index.php/register">
                   <ul>
                     <li><input type="text" name="name" placeholder="Nombre" required></li>
                     <li><input type="email" name="email" placeholder="Correo electrónico" required></li>

@@ -13,7 +13,7 @@
   <meta name="description" content="">
   <meta name="keyword" content="">
   <!--== FAV ICON(BROWSER TAB ICON) ==-->
-  <link rel="shortcut icon" href="<?= base_url(); ?>assets/images/fav.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="<?= base_url(); ?>assets/images/logo.png" type="image/x-icon">
   <!--== GOOGLE FONTS ==-->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
   <!--== CSS FILES ==-->
@@ -31,6 +31,10 @@
 #76C2C8 Azul oscuro
 #87C6CB Azul claro
 #C5907B	Cafecito
+#999999 gris letra titulos
+#AFAFAF gris letra oscura
+#C7C7C7 gris letra clara
+
 -->
 <body>
   <!-- Preloader -->
@@ -43,7 +47,7 @@
       <div class="land-container">
         <div class="land-3-top">
           <div class="land-3-top-logo">
-            <a href="#"><img src="<?= base_url(); ?>assets/images/software-logo.png"></a>
+            <a href="#"><img src="<?= base_url(); ?>assets/images/logo.png"></a>
           </div>
           <div class="land-3-top-contact">
             <ul>
@@ -56,57 +60,26 @@
   </section>
 
   <section>
-    <div class="land-full land-3-banner-full">
-      <div class="land-container" >
-        <div class="land-3-banner" >
-          <div class="land-3-banner-conte">
-            <h1>Event Headline</h1>
-            <h4>Sub Headline Aenean sed turpis volutpat</h4>
-            <p>Nam at viverra sem. Sed faucibus sed dui eget feugiat. Praesent felis velit, maximus at dapibus semper, fermentum sagittis diam. </p>
-            <div class="land-event-date">
-              <div class="land-event-date-left">
-                <span>05</span>
-                <span>Apr</span>
-              </div>
-              <div class="land-event-date-right">
-                <h4>taj coromandel</h4>
-                <span>London, United Kingdom</span>
-              </div>
-            </div>
-          </div>
-          <div class="land-3-banner-form">
-            <div class="land-com-form">
-              <h2>Registration</h2>
-              <form class="contact__form" method="post" action="http://rn53themes.net/themes/demo/landing-pages/mail.php">
-                <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                  Thank you for Registering.
-                </div>
-                <ul>
-                  <li><input type="text" name="name" placeholder="Name"></li>
-                  <li><input type="text" name="email" placeholder="Email id"></li>
-                  <li><input type="text" name="phone" placeholder="Phone"></li>
-                  <li><input type="submit" name="submit" value="Download Now"></li>
-                  <li><p>Praesent felis velit, maximus at dapibus semper, fermentum sagittis diam. <a href="#">Privacy Policy</a></p></li>
-                </ul>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
     <div class="land-full land-3-dwn-full">
       <div class="land-container">
         <div class="land-3-dwn">
           <div class="land-3-dwn-img">
-            <img src="<?= base_url(); ?>assets/images/event.jpg" alt="" class="land-1-pro-img">
+            <img src="<?= base_url(); ?>assets/images/banner.jpg" alt="" class="land-1-pro-img">
           </div>
+
           <div class="land-3-dwn-right">
-            <h2>Sub Great Headline</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu cursus sapien. Quisque eu ultricies ligula. Pellentesque sed odio sagittis, pulvinar dui eget, commodo metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at dignissim elit, a egestas risus.</p>
-            <a href="#" class="buy-now-btn">More details</a> <a href="#" class="dwn-now-btn">Register Now</a>
+            <h2 style="color:#999999">INTIIV</h2>
+            <div class="land-container">
+              <div class="land-3-dwn">
+                <div class="land-3-dwn-right">
+                  <p style="color:#C7C7C7">ES EL PRIMER PRODUCTO PORTABLE PARA LA HIGIENE ÍNTIMA FEMENINA EN EL MUNDO.</p>
+                </div>
+              </div>
+            </div>
+
+
+            <p style="color:#AFAFAF">CON SU FÓRMULA BASADA EN TECNOLOGIA NATURAL MANTIENE UNA HIGIENE Y PROTECCION ÓPTIA DE NUESTRA ZONA INTIMA, BALANCEA SU PH, PREVIENE EL MAL OLOR Y DISMINUYE EL FLUJO</p>
+            <p style="color: #76C2C8">HIGIENE INSTANTÁNEA SI ENJUAGUE.</p>
           </div>
         </div>
       </div>
@@ -118,38 +91,18 @@
       <div class="land-container">
         <div class="land-3-agen">
           <div class="land-3-agen-left">
-            <h2>Agenda</h2>
-            <p>Pellentesque sed odio sagittis, pulvinar dui eget, commodo metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at dignissim elit, a egestas risus.</p>
+            <h2 style="color:#999999">MODO SE USO</h2>
           </div>
           <div class="land-3-agen-right">
             <ul>
               <li>
-                <h4>Welcome to Event</h4>
-                <p>Mauris ornare massa at ultrices pellentesque. Nunc iaculis lacinia leo, quis interdum quam egestas non. Etiam dolor ligula, ornare eget fringilla nec,</p>
+                <p style="color:#AFAFAF">APLICA MIIKA INTIIV EN CUALQUIER OCASIÓN OPORTUNA EN LA ZONA V PARA MAYOR PROTECCIÓN E HIGIENE.</p>
               </li>
               <li>
-                <h4>Introduction about event</h4>
-                <p>Pellentesque ornare tempus risus. Phasellus nec velit malesuada, congue neque quis, feugiat sapien. Vestibulum nisi augue, eleifend et quam quis, vestibulum sagittis ante.</p>
+                <p style="color:#AFAFAF">NO REQUIERE ENJUAGUE.</p>
               </li>
               <li>
-                <h4>Event Awards and Achievement</h4>
-                <p>Nulla eu libero luctus dui ultricies tempus. In hac habitasse platea dictumst. Suspendisse consectetur rutrum neque sed dapibus.</p>
-              </li>
-              <li>
-                <h4>Lunch break</h4>
-                <p>Ut tincidunt leo et iaculis mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
-              </li>
-              <li>
-                <h4>Event sections</h4>
-                <p>Aliquam gravida nunc eget ullamcorper accumsan. Quisque cursus purus erat, et gravida dui hendrerit eu. Integer vitae odio bibendum</p>
-              </li>
-              <li>
-                <h4>Event sections</h4>
-                <p>Vestibulum dictum turpis id augue aliquet sodales. Donec sit amet nisi diam. Morbi nec ultrices tortor.</p>
-              </li>
-              <li>
-                <h4>Finish</h4>
-                <p>Aliquam sit amet mi vel odio viverra porta. Proin aliquam, lectus eget pulvinar tincidunt, est orci tempor leo, nec lobortis risus felis in sapien.</p>
+                <p style="color:#AFAFAF">NO CUENTA CON UN LÍMITE DE APLICACIONES DIARIAS.</p>
               </li>
             </ul>
           </div>
